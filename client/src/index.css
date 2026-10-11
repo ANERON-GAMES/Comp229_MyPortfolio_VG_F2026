@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #000000;
+  color: #ffffff;
+  padding: 1.5rem 1.5rem 1.8rem;
+  text-align: center;
+  border-bottom: 3px solid #000000;
+}
+
+.brand {
+  display: inline-block;
+  margin-bottom: 1.1rem;
+}
+
+.brand img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.55rem 1.1rem;
+  border: 2px solid transparent;
+  display: inline-block;
+}
+
+nav a:hover {
+  opacity: 0.7;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+nav a.active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  font-weight: 700;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+footer {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.4rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+  padding: 4rem 2.2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 7vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+}
+
+.hero p {
+  font-weight: 300;
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border: 2px solid currentColor;
+  padding: 0.9rem 1.6rem;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.hero .btn {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.hero .btn:hover,
+.btn-fill:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.node {
+  border: 2px solid #000000;
+  padding: 2rem 1.4rem;
+  text-align: center;
+}
+
+.node-id {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.node h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.7rem;
+}
+
+.page-title {
+  font-size: clamp(1.4rem, 5vw, 2.6rem);
+  font-weight: 900;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.about-wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-wrap img {
+  width: 100%;
+  border: 2px solid #000000;
+  display: block;
+}
+
+.muted {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555555;
+  display: block;
+  margin: 0.4rem 0 1rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  border: 2px solid #000000;
+  margin-bottom: 1.5rem;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 180px;
+}
+
+.project-body {
+  padding: 1.4rem 1.4rem 1.4rem 0;
+}
+
+.project-body h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+}
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.svc {
+  border: 2px solid #000000;
+  padding: 1.4rem;
+  text-align: center;
+}
+
+.svc img {
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.entry {
+  border: 2px solid #000000;
+  padding: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 1.5rem;
+}
+
+.panel, form {
+  border: 2px solid #000000;
+  padding: 1.6rem;
+}
+
+label {
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+input, textarea {
+  width: 100%;
+  border: 2px solid #000000;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1rem;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+button.btn {
+  background: #000000;
+  color: #ffffff;
+}
+
+button.btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.receipt {
+  border: 2px solid #000000;
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+  background: #000000;
+  color: #ffffff;
+}
+
+.receipt h2 {
+  margin-bottom: 0.8rem;
+}
+
+.receipt p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+}
+
+a.inline {
+  color: inherit;
+  font-weight: 700;
+}
+
+@media (max-width: 880px) {
+  header {
+    padding: 1rem 0.7rem 1.2rem;
+  }
+  .brand img {
+    height: auto;
+    width: min(220px, 70vw);
+  }
+  nav ul {
+    gap: 0.25rem 0.15rem;
+    width: 100%;
+  }
+  nav a {
+    flex: 1 1 30%;
+    font-size: 0.72rem;
+    letter-spacing: 0;
+    padding: 0.4rem 0.2rem;
+  }
+  .grid-3, .svc-grid, .about-wrap, .project-card, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-body {
+    padding: 1.2rem;
+  }
+  .hero {
+    padding: 2.4rem 1.2rem;
+  }
+}
